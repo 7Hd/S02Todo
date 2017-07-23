@@ -198,7 +198,8 @@ label[for='toggle-all'] {
 	margin-left: 45px;
 	display: block;
 	line-height: 1.2;
-	transition: color 0.4s;
+  transition: color 0.4s;
+  user-select: none;
 }
 
 .todo-list li.completed label {
