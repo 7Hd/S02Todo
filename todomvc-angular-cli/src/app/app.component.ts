@@ -42,6 +42,10 @@ export class AppComponent implements OnInit {
     todo.selected = false;
   }
 
+  remove(removeIndex: number) {
+    this.todoList.splice(removeIndex, 1);
+  }
+
   createNewTodo(input: HTMLInputElement) {
     this.todoList.push(new Todo({
       id: generateId(),
