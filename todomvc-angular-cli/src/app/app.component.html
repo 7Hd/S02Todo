@@ -16,7 +16,8 @@
           <label (dblclick)="select(todo, edit)">{{todo.name}}</label>
           <button class="destroy" (click)="remove(index)"></button>
         </div>
-        <input class="edit" #edit (keyup.enter)="rename(todo, newName)" (blur)="todo.selected = false" [(ngModel)]="newName" autofocus>
+        <input class="edit" #edit (keyup.enter)="rename(todo, newName)" (keydown.esc)="todo.selected = false" (blur)="todo.selected = false"
+          [(ngModel)]="newName" autofocus>
       </li>
     </ul>
   </section>
